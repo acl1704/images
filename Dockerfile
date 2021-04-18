@@ -18,7 +18,7 @@ RUN wget -qO - https://dl.winehq.org/wine-builds/winehq.key | apt-key add - \
  && wget -O- -q https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10/Release.key | apt-key add - \
  && echo "deb http://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10 ./" | tee /etc/apt/sources.list.d/wine-obs.list \
  && apt-get update \
- && apt install -y --install-recommends winehq-devel=5.1~buster wine-devel-amd64=5.1~buster wine-devel-i386=5.1~buster
+ && apt install -y --install-recommends winehq-devel=5.1~buster wine-devel=5.1~buster wine-devel-amd64=5.1~buster wine-devel-i386=5.1~buster
 
 # Set up Winetricks
 RUN	wget -q -O /usr/sbin/winetricks https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks \
