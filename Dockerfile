@@ -18,7 +18,7 @@ RUN wget -qO - https://dl.winehq.org/wine-builds/winehq.key | apt-key add - \
  && wget -O- -q https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10/Release.key | apt-key add - \
  && echo "deb http://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10 ./" | tee /etc/apt/sources.list.d/wine-obs.list \
  && apt-get update \
- && apt install -y --install-recommends winehq-devel
+ && apt install -y --install-recommends winehq-staging
 
 # Set up Winetricks
 RUN	wget -q -O /usr/sbin/winetricks https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks \
